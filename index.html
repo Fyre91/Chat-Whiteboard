@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MultiDraw</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+
+    <div id="login-container">
+        <label for="name">Name: </label><br>
+        <input id="name" type="text" value=""/>
+        <div id="colorContainer">
+        </div>
+        <div id="submit-name">Enter</div>
+        
+    </div>
+
+    <div id="container">
+        
+        <div id="canvas-container">
+            <h4>Draw Here</h4>
+            <button id="clear-canvas">Clear</button>
+            <canvas id="paper" width="900px" height="700px">
+                    Your browser doesn't support canvas. Please dont come on the internet.
+            </canvas>
+        </div>
+
+        <div id="chat-container">
+            <h4>Chat Here</h4>
+
+            <div id="display-area"></div>
+            <textarea id="input-area">
+            </textarea>
+            <button id="enter-button">Enter</button>
+        </div>
+
+    </div>
+    <!-- <script src="js/lib/socket.io.js"></script> -->
+    <script src="js/lib/socket.io-1.3.2.js"></script>
+    <script src="js/lib/jquery-1.11.2.js"></script>
+    <script src="js/lib/mustache.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/chat.js"></script>
+
+
+
+    <script id="colorTemplate" type="x-tmpl-mustache">
+        <select id="color-picker">
+            {{ #. }}
+            <option value={{colorCode}}>{{colorName}}</option>
+            {{ /. }}
+        </select>
+    </script>
+
+
+ </body>
+</html>
